@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>button</h1>
+    <button id="stop">Stop</button>
+  </body>
+
+  <script>
+    const hello1 = function(){
+        console.log("shubham");
+    }
+    setTimeout(hello1,2000)
+
+    setInterval(function(){
+        console.log("shubham");},2000) 
+
+      const change2 = function(){
+        document.querySelector('h1').innerHTML ="best pc in the world"
+      }
+
+      const changeMe = setTimeout(change2,2000);
+
+      
+
+      document.querySelector('#stop').addEventListener('click',function(){clearTimeout(changeMe)
+    })
+    </script>
