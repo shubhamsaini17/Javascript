@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>hello shubham are you ok</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+
+  const changeH1 = function(str){
+    document.querySelector("h1").innerHTML = `i am changed now ${str}`;
+  }
+  // example 1
+  
+//   setInterval(function(str){
+//     document.querySelector("h1").innerHTML = `i am changed now ${str}`;
+//   },1000,"shubham")
+
+  // example 2 
+//   setInterval(changeH1,1000);
+  
+    
+
+    
+    const print = function(){
+        console.log("shubham",Date.now());
+    }
+    let toStop;
+    
+    document.querySelector('#start').addEventListener('click',function(){
+        toStop =setInterval(print,1000);
+    })
+    
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(toStop)
+    })
+    
+
+  
+</script>
+</html>
+
+<!-- document.querySelector("#start").addEventListener("click", function () {
+    const start = function () {
+      console.log("Rushi", Date.now());
+    };
+    const toStop = setInterval(start, 1000, (click = start));
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(toStop);
+    });
+  }); -->
+
